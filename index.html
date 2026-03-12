@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verena's Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="iphone-frame">
+        <div class="iphone-notch"></div>
+        <div class="iphone-screen">
+            <div id="player">
+                <div class="cover-container">
+                    <img src="Show Me Love (with Tyla) cover.jpg" alt="Album Cover">
+                </div>
+                <div class="track-info">
+                    <div id="track-title">Show Me Love (with Tyla)</div>
+                    <div class="track-artist">WizTheMc, Tyla, bees & honey</div>
+                </div>
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+                <div class="controls">
+                    <button id="prev" class="control-btn">⏮️</button>
+                    <button id="play-pause" class="control-btn">▶️</button>
+                    <button id="next" class="control-btn">⏭️</button>
+                </div>
+                <div class="volume-container">
+                    <span class="volume-label">🔊</span>
+                    <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+                </div>
+            </div>
+        </div>
+        <div class="iphone-home"></div>
+    </div>
+    <div class="vertical-line"></div>
+<div class="quiz-section">
+    <div class="quiz-header">
+      <h1 class="quiz-title">Verena's Quiz</h1>
+      <p class="quiz-sub">How well do you know her? 🌸</p>
+    </div>
+
+    <div class="quiz-questions">
+
+      <div class="q-card">
+        <p class="q-label"><span class="q-num">01</span>What's Verena's favourite hobby?</p>
+        <div class="options" id="q1">
+          <button class="opt" data-val="reading" onclick="pick(this,'q1')">Reading</button>
+          <button class="opt" data-val="sports"  onclick="pick(this,'q1')">Sports</button>
+          <button class="opt" data-val="cooking" onclick="pick(this,'q1')">Cooking</button>
+          <button class="opt" data-val="gaming"  onclick="pick(this,'q1')">Gaming</button>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <p class="q-label"><span class="q-num">02</span>What's her favourite season?</p>
+        <div class="options" id="q2">
+          <button class="opt" data-val="spring" onclick="pick(this,'q2')">Spring</button>
+          <button class="opt" data-val="summer" onclick="pick(this,'q2')">Summer</button>
+          <button class="opt" data-val="autumn" onclick="pick(this,'q2')">Autumn</button>
+          <button class="opt" data-val="winter" onclick="pick(this,'q2')">Winter</button>
+        </div>
+      </div>
+
+      <div class="q-card">
+        <p class="q-label"><span class="q-num">03</span>Night owl or morning bird?</p>
+        <div class="options" id="q3">
+          <button class="opt" data-val="morning" onclick="pick(this,'q3')">Morning person</button>
+          <button class="opt" data-val="night"   onclick="pick(this,'q3')">Night person</button>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="check-btn" onclick="checkQuiz()">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+        <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+      </svg>
+      See my results
+    </button>
+
+    <div class="result-card" id="result" style="display:none">
+      <div class="result-score" id="result-score"></div>
+      <p class="result-title" id="result-title"></p>
+      <p class="result-body"  id="result-body"></p>
+      <button class="retry-btn" onclick="retryQuiz()">Try again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
