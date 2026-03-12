@@ -33,7 +33,7 @@ body {
     margin-left: 40px;
     width: 2px;
     background: var(--dark-pink);
-    height: 120vh;
+    height: 140vh;
 }
 
 /* ── iPhone Frame ───────────────────────────────────────── */
@@ -688,4 +688,5 @@ body {
   .opt { padding: 6px 14px; font-size: 0.77rem; }
   .check-btn { width: 100%; justify-content: center; }
   .result-score { font-size: 2.2rem; }
+
 }
