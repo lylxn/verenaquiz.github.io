@@ -9,7 +9,7 @@ const tracks = [
     title: "Me Gustas Tu",
     artist: "Manu Chao",
     src: "Manu Chao - Me Gustas Tu (SPOTISAVER).mp3",
-    cover: "me gustas tu cover.jpg",
+    cover: "Me Gustats Tu cover.jpg",
   },
   {
     title: "THE GREATEST",
@@ -223,4 +223,5 @@ function retryQuiz() {
     delete quizSelected[qid];
   });
   document.getElementById('result').style.display = 'none';
+
 }
